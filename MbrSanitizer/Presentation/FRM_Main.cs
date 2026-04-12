@@ -128,9 +128,6 @@ public partial class FRM_Main : Form
         if(MessageBox.Show("Möchtest du wirklich alle Dateien und Verzeichnise löschen?", _appName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
             return;
 
-        if(MessageBox.Show("Möchtest du den Prozess abbrechen?", _appName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.No)
-            return;
-
         FilesManager.DeleteAllProjectFiles(LBL_ProjectPath.Text);
 
         _ = MessageBox.Show("Projekt Verzeichnis erfolgreich geleert.", _appName, MessageBoxButtons.OK, MessageBoxIcon.Information);

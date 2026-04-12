@@ -321,7 +321,6 @@
             // 
             TBX_CustomComment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             TBX_CustomComment.Animated = true;
-            TBX_CustomComment.AutoScroll = true;
             TBX_CustomComment.BackColor = Color.Transparent;
             TBX_CustomComment.BorderColor = Color.FromArgb(103, 99, 99);
             TBX_CustomComment.BorderRadius = 5;
@@ -334,20 +333,20 @@
             TBX_CustomComment.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             TBX_CustomComment.FillColor = Color.FromArgb(80, 76, 76);
             TBX_CustomComment.FocusedState.BorderColor = Color.FromArgb(162, 123, 90);
-            TBX_CustomComment.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TBX_CustomComment.Font = new Font("Leelawadee UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TBX_CustomComment.ForeColor = Color.FromArgb(235, 234, 234);
             TBX_CustomComment.HoverState.BorderColor = Color.FromArgb(194, 165, 142);
-            TBX_CustomComment.Location = new Point(378, 32);
-            TBX_CustomComment.Margin = new Padding(3, 4, 3, 4);
+            TBX_CustomComment.Location = new Point(378, 31);
             TBX_CustomComment.Multiline = true;
             TBX_CustomComment.Name = "TBX_CustomComment";
             TBX_CustomComment.PlaceholderForeColor = Color.FromArgb(151, 148, 148);
             TBX_CustomComment.PlaceholderText = "[...]";
             TBX_CustomComment.SelectedText = "";
             TBX_CustomComment.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            TBX_CustomComment.Size = new Size(341, 106);
+            TBX_CustomComment.Size = new Size(339, 108);
             TBX_CustomComment.TabIndex = 4;
             TLP_Main.SetToolTip(TBX_CustomComment, "Dieser Kommentar wird vor dem schließenden Body-Tag angehangen.");
+            TBX_CustomComment.WordWrap = false;
             // 
             // CHX_AntiDragImgs
             // 
