@@ -241,7 +241,7 @@
             LBL_CustomComment.Size = new Size(311, 20);
             LBL_CustomComment.TabIndex = 3;
             LBL_CustomComment.Text = "Persönlicher Kommentar bevor </body>-Tag:";
-            TLP_Main.SetToolTip(LBL_CustomComment, "Der selektierte Projekt Pfad");
+            TLP_Main.SetToolTip(LBL_CustomComment, "Dieser Kommentar wird vor dem schließenden Body-Tag angehangen");
             // 
             // TBX_ValueLong
             // 
@@ -345,7 +345,7 @@
             TBX_CustomComment.ShadowDecoration.CustomizableEdges = customizableEdges13;
             TBX_CustomComment.Size = new Size(339, 108);
             TBX_CustomComment.TabIndex = 4;
-            TLP_Main.SetToolTip(TBX_CustomComment, "Dieser Kommentar wird vor dem schließenden Body-Tag angehangen.");
+            TLP_Main.SetToolTip(TBX_CustomComment, "Dieser Kommentar wird vor dem schließenden Body-Tag angehangen");
             TBX_CustomComment.WordWrap = false;
             // 
             // CHX_AntiDragImgs
@@ -517,11 +517,11 @@
             LBL_Copyright.BackColor = Color.Transparent;
             LBL_Copyright.Font = new Font("Leelawadee UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             LBL_Copyright.ForeColor = Color.FromArgb(151, 148, 148);
-            LBL_Copyright.Location = new Point(15, 441);
+            LBL_Copyright.Location = new Point(15, 456);
             LBL_Copyright.Name = "LBL_Copyright";
-            LBL_Copyright.Size = new Size(103, 30);
+            LBL_Copyright.Size = new Size(180, 15);
             LBL_Copyright.TabIndex = 11;
-            LBL_Copyright.Text = "© PIN0L33KZ\r\nwww.pinoleekz.de";
+            LBL_Copyright.Text = "© PIN0L33KZ, www.pinoleekz.de";
             // 
             // FRM_Main
             // 
