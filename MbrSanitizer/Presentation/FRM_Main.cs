@@ -16,6 +16,34 @@ public partial class FRM_Main : Form
     {
         InitializeComponent();
         Text = $"{Const.AppName} v{Const.AppVersion}";
+
+        // Check if last known good template file location exists and fill UI with it
+        var lastKnownGoodTemplate = Application.Settings.Default.LastKnownGoodTemplate;
+
+        // Check if last known good template is filled in application settings
+        if(lastKnownGoodTemplate == null || lastKnownGoodTemplate == string.Empty)
+            return;
+
+        // Chek if last known good template still exists -> load it, else -> otherwise clear settings
+        if(File.Exists(lastKnownGoodTemplate))
+        {
+            // Import Template and create object
+            Template tmpTemplate = TemplateImporter.ImportTemplate(lastKnownGoodTemplate);
+
+            // Fill UI with Template values
+            FillUi(tmpTemplate);
+            _projectSelected = true;
+
+            // Inform user that the last known good template was loaded
+            _ = MessageBox.Show($"Letzte bekannte Vorlage wurde erfolgreich geladen.\n{lastKnownGoodTemplate}", Const.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        else
+        {
+            // Clear settings if file does not exist
+            Application.Settings.Default.LastKnownGoodTemplate = string.Empty;
+            Application.Settings.Default.Save();
+        }
+
     }
 
     //
@@ -105,6 +133,10 @@ public partial class FRM_Main : Form
             // Fill UI with Template values
             FillUi(tmpTemplate);
             _projectSelected = true;
+
+            // Save last known good template file location to application settings
+            Application.Settings.Default.LastKnownGoodTemplate = openFileDialog.FileName;
+            Application.Settings.Default.Save();
         }
         catch(Exception ex)
         {
