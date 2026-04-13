@@ -20,9 +20,7 @@ internal class InputSanitizer
     {
         // Check if the input is not null or empty
         if(string.IsNullOrEmpty(input))
-        {
             return false;
-        }
 
         // Check if the input contains only printable characters
         return System.Text.RegularExpressions.Regex.IsMatch(input, @"^[\x20-\x7E]+$");
@@ -30,18 +28,21 @@ internal class InputSanitizer
 
     public static bool IsValidTemplate(Template template)
     {
-        var isValid = true;
+        // Check if the template is not null
+        if(template == null)
+            return false;
 
         if(!IsValidText(template.ProjectPath) || template.ProjectPath.Length == 0)
-            isValid = false;
+            return false;
 
         if(!IsValidText(template.ValueShort) || template.ValueShort.Length == 0)
-            isValid = false;
+            return false;
 
         if(!IsValidText(template.ValueLong) || template.ValueLong.Length == 0)
-            isValid = false;
+            return false;
 
-        return isValid;
+        // Return true if all checks passed
+        return true;
     }
 
     public static Template SanitizeTemplate(Template template)

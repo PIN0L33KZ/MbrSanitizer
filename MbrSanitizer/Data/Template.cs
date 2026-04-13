@@ -12,10 +12,10 @@ internal class Template
     public required string ValueLong { get; set; }
 
     [JsonProperty("DeleteProjectFile")]
-    public bool DeleteMbrFile { get; set; }
+    public bool DeleteMbrFile { get; set; } = false;
 
     [JsonProperty("AntiDragImages")]
-    public bool AntiDragImgs { get; set; }
+    public bool AntiDragImgs { get; set; } = false;
 
     public string CustomComment { get; set; } = string.Empty;
 }

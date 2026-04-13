@@ -7,33 +7,21 @@ internal class TemplateImporter
 {
     public static Template ImportTemplate(string importPath)
     {
-        try
-        {
-            var json = File.ReadAllText(importPath);
-            Template? tmpTemplate = JsonConvert.DeserializeObject<Template>(json);
+        // Read the JSON file
+        var json = File.ReadAllText(importPath);
+        // Deserialize it into a Template object
+        Template? tmpTemplate = JsonConvert.DeserializeObject<Template>(json);
 
-            return tmpTemplate ?? new Template()
-            {
-                ProjectPath = "",
-                ValueShort = "",
-                ValueLong = "",
-                DeleteMbrFile = false,
-                AntiDragImgs = false,
-                CustomComment = ""
-            };
-        }
-        catch
+        // Return Template object
+        // If deserialization fails -> return default Template object
+        return tmpTemplate ?? new Template()
         {
-            _ = MessageBox.Show($"Die Vorlage konnte nicht geladen werden.", "Mobirise Sanitizer", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return new Template()
-            {
-                ProjectPath = "",
-                ValueShort = "",
-                ValueLong = "",
-                DeleteMbrFile = false,
-                AntiDragImgs = false,
-                CustomComment = ""
-            };
-        }
+            ProjectPath = "",
+            ValueShort = "",
+            ValueLong = "",
+            DeleteMbrFile = false,
+            AntiDragImgs = false,
+            CustomComment = ""
+        };
     }
 }
