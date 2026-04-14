@@ -217,6 +217,9 @@ public partial class FRM_Main : Form
 
         try
         {
+            // Disable UI to prevent user interaction during sanitization
+            EnableUi(false);
+
             // Normalize project path and sanitize input values
             var normalizedPath = Path.GetFullPath(LBL_ProjectPath.Text);
             var valueShort = InputSanitizer.SanitizeText(TBX_ValueShort.Text);
@@ -234,9 +237,18 @@ public partial class FRM_Main : Form
 
             _ = MessageBox.Show("Projekt erfolgreich gesäubert.", Const.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        catch(MobiriseProjectFileNotFoundException ex)
+        {
+            _ = MessageBox.Show($"{ex.Message}\nDeaktivere ggf. den Haken bei \"{CHX_DeleteMbrFile.Text}\"", Const.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
         catch(Exception ex)
         {
             _ = MessageBox.Show($"Projekt konnte nicht gesäubert werden: {ex.Message}", Const.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        finally
+        {
+            // Enable UI
+            EnableUi();
         }
     }
 
@@ -251,5 +263,10 @@ public partial class FRM_Main : Form
         CHX_DeleteMbrFile.Checked = template.DeleteMbrFile;
         CHX_AntiDragImgs.Checked = template.AntiDragImgs;
         TBX_CustomComment.Text = template.CustomComment;
+    }
+
+    private void EnableUi(bool enable = true)
+    {
+        Enabled = enable;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using MbrSanitizer.Helper;
+using System.Text.RegularExpressions;
 
 namespace MbrSanitizer.Services;
 
@@ -30,7 +31,7 @@ internal class FileManagerService
 
         // Check if the project.mobirise file exists
         if(!File.Exists(projectFile))
-            throw new FileNotFoundException("Im Projekt Verzeichnis existiert keine Mobirise Projekt-Datei.");
+            throw new MobiriseProjectFileNotFoundException("Im Projekt Verzeichnis existiert keine Mobirise Projekt-Datei.");
 
         // Delete the project.mobirise file
         File.Delete(projectFile);
