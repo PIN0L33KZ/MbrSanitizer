@@ -15,6 +15,9 @@ public partial class FRM_RecentProjekts : Form
     {
         InitializeComponent();
 
+        // Set Window title
+        Text = $"Zuletzt genutzte Projekte - {Const.AppName} v{Const.AppVersion}";
+
         // Fill the Ui
         FillUi();
     }

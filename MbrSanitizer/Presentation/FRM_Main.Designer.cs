@@ -550,7 +550,7 @@
             Name = "FRM_Main";
             Padding = new Padding(15);
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Mobirise Sanitizer";
+            Text = "FRM_Main";
             PNL_TopBar.ResumeLayout(false);
             PNL_TopBar2.ResumeLayout(false);
             PNL_TopBar3.ResumeLayout(false);

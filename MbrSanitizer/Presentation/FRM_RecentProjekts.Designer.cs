@@ -180,7 +180,7 @@ partial class FRM_RecentProjekts
         MaximizeBox = false;
         Name = "FRM_RecentProjekts";
         StartPosition = FormStartPosition.CenterScreen;
-        Text = "Zuletzt genutzte Projekte";
+        Text = "FRM_RecentProjekts";
         PNL_Top.ResumeLayout(false);
         PNL_Top.PerformLayout();
         ResumeLayout(false);
