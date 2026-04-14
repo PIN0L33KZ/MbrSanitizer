@@ -1,4 +1,5 @@
 using MbrSanitizer.Application;
+using MbrSanitizer.Application.CustomExceptions;
 using MbrSanitizer.Data;
 using MbrSanitizer.Helper;
 using MbrSanitizer.Services;
@@ -136,8 +137,10 @@ public partial class FRM_Main : Form
         if(folderBrowserDialog.ShowDialog() != DialogResult.OK)
             return;
 
+        // Set selected path to label
         LBL_ProjectPath.Text = folderBrowserDialog.SelectedPath;
 
+        // Set project selected to true
         _projectSelected = true;
     }
 

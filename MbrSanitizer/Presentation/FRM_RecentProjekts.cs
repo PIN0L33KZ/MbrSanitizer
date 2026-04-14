@@ -1,4 +1,5 @@
 ﻿using MbrSanitizer.Application;
+using MbrSanitizer.Application.EventArguments;
 using MbrSanitizer.Data;
 using MbrSanitizer.Helper;
 using MbrSanitizer.Services;
@@ -77,6 +78,21 @@ public partial class FRM_RecentProjekts : Form
 
         // Get the current list of recent projects
         List<Project>? recentProjects = RecentFilesManager.GetRecentProjects();
+
+        // If no recent projects are found, display a message and return Method
+        if(recentProjects.Count == 0)
+        {
+            Label LBL_NoRecentProjects = new()
+            {
+                Text = "Keine kürzlich geöffneten Projekte gefunden",
+                Font = new Font("Leelawadee UI", 11, FontStyle.Regular),
+                Dock = DockStyle.Fill,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            PNL_RecentProjects.Controls.Add(LBL_NoRecentProjects);
+            return;
+        }
 
         // Clear the panel before filling it again
         PNL_RecentProjects.Controls.Clear();

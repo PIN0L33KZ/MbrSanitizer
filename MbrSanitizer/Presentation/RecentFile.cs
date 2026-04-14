@@ -1,5 +1,5 @@
-﻿using MbrSanitizer.Data;
-using MbrSanitizer.Helper;
+﻿using MbrSanitizer.Application.EventArguments;
+using MbrSanitizer.Data;
 
 namespace MbrSanitizer.Presentation;
 

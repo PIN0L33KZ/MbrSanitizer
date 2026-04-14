@@ -1,6 +1,6 @@
 ﻿using MbrSanitizer.Data;
 
-namespace MbrSanitizer.Helper;
+namespace MbrSanitizer.Application.EventArguments;
 
 public class ProjectEventArgs : EventArgs
 {

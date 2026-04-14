@@ -1,4 +1,4 @@
-﻿namespace MbrSanitizer.Helper;
+﻿namespace MbrSanitizer.Application.CustomExceptions;
 
 internal class MobiriseProjectFileNotFoundException : FileNotFoundException
 {
