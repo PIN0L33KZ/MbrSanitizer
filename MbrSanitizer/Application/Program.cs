@@ -1,3 +1,5 @@
+using MbrSanitizer.Presentation;
+
 namespace MbrSanitizer.Application;
 
 internal static class Program
@@ -6,6 +8,6 @@ internal static class Program
     private static void Main()
     {
         ApplicationConfiguration.Initialize();
-        System.Windows.Forms.Application.Run(new FRM_Main());
+        System.Windows.Forms.Application.Run(new FRM_RecentProjekts());
     }
 }

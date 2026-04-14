@@ -48,4 +48,17 @@ internal class TemplatesManagerService
 
         return tmpTemplate;
     }
+
+    public static Template GetDefaultTemplate()
+    {
+        return new Template()
+        {
+            ProjectPath = "",
+            ValueShort = "",
+            ValueLong = "",
+            DeleteMbrFile = false,
+            AntiDragImgs = false,
+            CustomComment = ""
+        };
+    }
 }

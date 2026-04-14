@@ -2,7 +2,7 @@
 
 namespace MbrSanitizer.Data;
 
-internal class Template
+public class Template
 {
     [JsonProperty("ProjPath")]
     public required string ProjectPath { get; set; }

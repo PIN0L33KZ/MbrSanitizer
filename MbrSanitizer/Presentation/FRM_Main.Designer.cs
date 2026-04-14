@@ -541,6 +541,7 @@
             Font = new Font("Lexend", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = Color.FromArgb(235, 234, 234);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormScreenCaptureMode = ScreenCaptureMode.HideContent;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;

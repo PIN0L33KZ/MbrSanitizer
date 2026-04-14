@@ -26,12 +26,12 @@ namespace MbrSanitizer.Application {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string LastKnownGoodTemplate {
+        public string RecentProjects {
             get {
-                return ((string)(this["LastKnownGoodTemplate"]));
+                return ((string)(this["RecentProjects"]));
             }
             set {
-                this["LastKnownGoodTemplate"] = value;
+                this["RecentProjects"] = value;
             }
         }
     }

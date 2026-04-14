@@ -68,4 +68,13 @@ internal class FileManagerService
             File.WriteAllText(htmlFile, editedHtmlFile);
         }
     }
+
+    public static bool DoesFileExist(string path)
+    {
+        // Normalize the path
+        var normalizedPath = Path.GetFullPath(path);
+
+        // Return whether the file exists or not
+        return File.Exists(normalizedPath);
+    }
 }
