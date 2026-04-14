@@ -2,7 +2,7 @@
 
 namespace MbrSanitizer.Services;
 
-internal class FilesManager
+internal class FileManagerService
 {
     public static void DeleteAllProjectFiles(string path)
     {

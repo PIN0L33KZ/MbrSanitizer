@@ -1,5 +1,6 @@
 using MbrSanitizer.Application;
 using MbrSanitizer.Data;
+using MbrSanitizer.Helper;
 using MbrSanitizer.Services;
 using System.Diagnostics;
 
@@ -28,7 +29,7 @@ public partial class FRM_Main : Form
         if(File.Exists(lastKnownGoodTemplate))
         {
             // Import Template and create object
-            Template tmpTemplate = TemplateImporter.ImportTemplate(lastKnownGoodTemplate);
+            Template tmpTemplate = TemplatesManagerService.ImportTemplate(lastKnownGoodTemplate);
 
             // Fill UI with Template values
             FillUi(tmpTemplate);
@@ -72,7 +73,7 @@ public partial class FRM_Main : Form
         try
         {
             // Sanitize Template
-            tmpTemplate = InputSanitizer.SanitizeTemplate(tmpTemplate);
+            tmpTemplate = TemplatesManagerService.SanitizeTemplate(tmpTemplate);
 
             // Check if Template is valid
             if(!InputSanitizer.IsValidTemplate(tmpTemplate))
@@ -82,12 +83,7 @@ public partial class FRM_Main : Form
             }
 
             // Create SaveFileDialog object to save the Template
-            SaveFileDialog saveFileDialog = new()
-            {
-                FileName = "Vorlage",
-                Filter = "JSON files (*.json)|*.json",
-                Title = "Öffne deine Vorlagen Datei"
-            };
+            SaveFileDialog saveFileDialog = DialogCreator.CreateSaveFileDialog("Speichere deine Vorlage");
 
             // Abort if user cancels the SaveFileDialog
             if(saveFileDialog.ShowDialog() != DialogResult.OK)
@@ -95,7 +91,7 @@ public partial class FRM_Main : Form
                 return;
             }
 
-            TemplateExporter.ExportTemplate(tmpTemplate, saveFileDialog.FileName);
+            TemplatesManagerService.ExportTemplate(tmpTemplate, saveFileDialog.FileName);
         }
         catch(Exception ex)
         {
@@ -115,11 +111,7 @@ public partial class FRM_Main : Form
         }
 
         // Create OpenFileDialog object
-        OpenFileDialog openFileDialog = new()
-        {
-            Filter = "JSON files (*.json)|*.json",
-            Title = "Öffne deine Vorlagen Datei"
-        };
+        OpenFileDialog openFileDialog = DialogCreator.CreateOpenFileDialog("Wähle eine Vorlage zum Importieren aus");
 
         // Abort if user cancels the OpenFileDialog
         if(openFileDialog.ShowDialog() != DialogResult.OK)
@@ -128,7 +120,7 @@ public partial class FRM_Main : Form
         try
         {
             // Import Template and create object
-            Template tmpTemplate = TemplateImporter.ImportTemplate(openFileDialog.FileName);
+            Template tmpTemplate = TemplatesManagerService.ImportTemplate(openFileDialog.FileName);
 
             // Fill UI with Template values
             FillUi(tmpTemplate);
@@ -147,11 +139,7 @@ public partial class FRM_Main : Form
     private void BTN_SelectProjectPath_Click(object sender, EventArgs e)
     {
         // Create FolderBrowserDialog object to select the project path
-        FolderBrowserDialog folderBrowserDialog = new()
-        {
-            Description = "Wähle den Pfad zu deinem Mobirise Projektordner aus.",
-            UseDescriptionForTitle = true
-        };
+        FolderBrowserDialog folderBrowserDialog = DialogCreator.CreateFolderBrowserDialog("Wähle den Projektordner aus");
 
         if(folderBrowserDialog.ShowDialog() != DialogResult.OK)
             return;
@@ -177,7 +165,7 @@ public partial class FRM_Main : Form
         try
         {
             // Delete all files in the project directory
-            FilesManager.DeleteAllProjectFiles(LBL_ProjectPath.Text);
+            FileManagerService.DeleteAllProjectFiles(LBL_ProjectPath.Text);
 
             _ = MessageBox.Show("Projekt Verzeichnis erfolgreich geleert.", Const.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -235,7 +223,7 @@ public partial class FRM_Main : Form
             var valueLong = InputSanitizer.SanitizeText(TBX_ValueLong.Text);
 
             // Sanitize project
-            ProjectSanitizer.SanitizeProject(
+            ProjectSanitizerService.SanitizeProject(
                 normalizedPath,
                 valueShort,
                 valueLong,

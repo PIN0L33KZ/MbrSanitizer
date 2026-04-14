@@ -2,7 +2,7 @@
 
 namespace MbrSanitizer.Services;
 
-internal static class ProjectSanitizer
+internal static class ProjectSanitizerService
 {
     public static void SanitizeProject(string path, string valueShort, string valueLong, bool deleteMbrFile, bool antiDragImages, string customComment)
     {
@@ -17,11 +17,11 @@ internal static class ProjectSanitizer
 
         // Delete Mobirise-Project file if requested
         if(deleteMbrFile)
-            FilesManager.DeleteMbrFile(path);
+            FileManagerService.DeleteMbrFile(path);
 
         // Attach custom comment to files if provided
         if(!string.IsNullOrWhiteSpace(customComment))
-            FilesManager.AttachCustomCommentToFiles(path, customComment);
+            FileManagerService.AttachCustomCommentToFiles(path, customComment);
     }
 
     //

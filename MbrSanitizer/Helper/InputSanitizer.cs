@@ -1,6 +1,6 @@
 ﻿using MbrSanitizer.Data;
 
-namespace MbrSanitizer.Services;
+namespace MbrSanitizer.Helper;
 
 internal class InputSanitizer
 {
@@ -43,20 +43,5 @@ internal class InputSanitizer
 
         // Return true if all checks passed
         return true;
-    }
-
-    public static Template SanitizeTemplate(Template template)
-    {
-        Template tmpTemplate = new()
-        {
-            ProjectPath = SanitizeText(template.ProjectPath),
-            ValueShort = SanitizeText(template.ValueShort),
-            ValueLong = SanitizeText(template.ValueLong),
-            CustomComment = template.CustomComment,
-            DeleteMbrFile = template.DeleteMbrFile,
-            AntiDragImgs = template.AntiDragImgs
-        };
-
-        return tmpTemplate;
     }
 }
