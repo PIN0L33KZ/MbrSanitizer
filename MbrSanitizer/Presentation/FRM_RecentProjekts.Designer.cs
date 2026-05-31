@@ -67,9 +67,9 @@ partial class FRM_RecentProjekts
         // BTN_ExitApplication
         // 
         BTN_ExitApplication.Animated = true;
-        BTN_ExitApplication.AutoRoundedCorners = true;
         BTN_ExitApplication.BackColor = Color.Transparent;
         BTN_ExitApplication.BorderColor = Color.Transparent;
+        BTN_ExitApplication.BorderRadius = 5;
         BTN_ExitApplication.Cursor = Cursors.Hand;
         BTN_ExitApplication.CustomizableEdges = customizableEdges1;
         BTN_ExitApplication.DisabledState.BorderColor = Color.DarkGray;
@@ -77,7 +77,7 @@ partial class FRM_RecentProjekts
         BTN_ExitApplication.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
         BTN_ExitApplication.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
         BTN_ExitApplication.FillColor = Color.FromArgb(162, 123, 90);
-        BTN_ExitApplication.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+        BTN_ExitApplication.Font = new Font("Leelawadee UI", 11.25F);
         BTN_ExitApplication.ForeColor = Color.White;
         BTN_ExitApplication.Image = Properties.Resources.exit;
         BTN_ExitApplication.Location = new Point(291, 434);
@@ -91,9 +91,9 @@ partial class FRM_RecentProjekts
         // BTN_ImportTemplate
         // 
         BTN_ImportTemplate.Animated = true;
-        BTN_ImportTemplate.AutoRoundedCorners = true;
         BTN_ImportTemplate.BackColor = Color.Transparent;
         BTN_ImportTemplate.BorderColor = Color.Transparent;
+        BTN_ImportTemplate.BorderRadius = 5;
         BTN_ImportTemplate.Cursor = Cursors.Hand;
         BTN_ImportTemplate.CustomizableEdges = customizableEdges3;
         BTN_ImportTemplate.DisabledState.BorderColor = Color.DarkGray;
@@ -101,7 +101,7 @@ partial class FRM_RecentProjekts
         BTN_ImportTemplate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
         BTN_ImportTemplate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
         BTN_ImportTemplate.FillColor = Color.FromArgb(162, 123, 90);
-        BTN_ImportTemplate.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+        BTN_ImportTemplate.Font = new Font("Leelawadee UI", 11.25F);
         BTN_ImportTemplate.ForeColor = Color.White;
         BTN_ImportTemplate.Image = Properties.Resources.import;
         BTN_ImportTemplate.Location = new Point(64, 434);
@@ -115,9 +115,9 @@ partial class FRM_RecentProjekts
         // BTN_NewTemplate
         // 
         BTN_NewTemplate.Animated = true;
-        BTN_NewTemplate.AutoRoundedCorners = true;
         BTN_NewTemplate.BackColor = Color.Transparent;
         BTN_NewTemplate.BorderColor = Color.Transparent;
+        BTN_NewTemplate.BorderRadius = 5;
         BTN_NewTemplate.Cursor = Cursors.Hand;
         BTN_NewTemplate.CustomizableEdges = customizableEdges5;
         BTN_NewTemplate.DisabledState.BorderColor = Color.DarkGray;
@@ -125,7 +125,7 @@ partial class FRM_RecentProjekts
         BTN_NewTemplate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
         BTN_NewTemplate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
         BTN_NewTemplate.FillColor = Color.FromArgb(162, 123, 90);
-        BTN_NewTemplate.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+        BTN_NewTemplate.Font = new Font("Leelawadee UI", 11.25F);
         BTN_NewTemplate.ForeColor = Color.White;
         BTN_NewTemplate.Image = Properties.Resources.link;
         BTN_NewTemplate.Location = new Point(200, 434);

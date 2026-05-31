@@ -156,15 +156,15 @@
             // BTN_ExportSettings
             // 
             BTN_ExportSettings.Animated = true;
-            BTN_ExportSettings.AutoRoundedCorners = true;
             BTN_ExportSettings.BackColor = Color.Transparent;
             BTN_ExportSettings.BorderColor = Color.Transparent;
+            BTN_ExportSettings.BorderRadius = 5;
             BTN_ExportSettings.Cursor = Cursors.Hand;
             BTN_ExportSettings.CustomizableEdges = customizableEdges4;
             BTN_ExportSettings.DisabledState.FillColor = Color.FromArgb(80, 76, 76);
             BTN_ExportSettings.DisabledState.ForeColor = Color.FromArgb(103, 99, 99);
             BTN_ExportSettings.FillColor = Color.FromArgb(162, 123, 90);
-            BTN_ExportSettings.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+            BTN_ExportSettings.Font = new Font("Leelawadee UI", 11.25F);
             BTN_ExportSettings.ForeColor = Color.White;
             BTN_ExportSettings.Image = Properties.Resources.export;
             BTN_ExportSettings.Location = new Point(8, 7);
@@ -179,15 +179,15 @@
             // BTN_ImportSettings
             // 
             BTN_ImportSettings.Animated = true;
-            BTN_ImportSettings.AutoRoundedCorners = true;
             BTN_ImportSettings.BackColor = Color.Transparent;
             BTN_ImportSettings.BorderColor = Color.Transparent;
+            BTN_ImportSettings.BorderRadius = 5;
             BTN_ImportSettings.Cursor = Cursors.Hand;
             BTN_ImportSettings.CustomizableEdges = customizableEdges6;
             BTN_ImportSettings.DisabledState.FillColor = Color.FromArgb(80, 76, 76);
             BTN_ImportSettings.DisabledState.ForeColor = Color.FromArgb(103, 99, 99);
             BTN_ImportSettings.FillColor = Color.FromArgb(162, 123, 90);
-            BTN_ImportSettings.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+            BTN_ImportSettings.Font = new Font("Leelawadee UI", 11.25F);
             BTN_ImportSettings.ForeColor = Color.White;
             BTN_ImportSettings.Image = Properties.Resources.import;
             BTN_ImportSettings.Location = new Point(144, 7);
@@ -233,7 +233,7 @@
             TBX_ValueLong.Animated = true;
             TBX_ValueLong.BackColor = Color.Transparent;
             TBX_ValueLong.BorderColor = Color.FromArgb(103, 99, 99);
-            TBX_ValueLong.BorderRadius = 15;
+            TBX_ValueLong.BorderRadius = 5;
             TBX_ValueLong.BorderThickness = 2;
             TBX_ValueLong.CustomizableEdges = customizableEdges8;
             TBX_ValueLong.DefaultText = "";
@@ -263,7 +263,7 @@
             TBX_ValueShort.Animated = true;
             TBX_ValueShort.BackColor = Color.Transparent;
             TBX_ValueShort.BorderColor = Color.FromArgb(103, 99, 99);
-            TBX_ValueShort.BorderRadius = 15;
+            TBX_ValueShort.BorderRadius = 5;
             TBX_ValueShort.BorderThickness = 2;
             TBX_ValueShort.CustomizableEdges = customizableEdges10;
             TBX_ValueShort.DefaultText = "";
@@ -377,15 +377,15 @@
             // BTN_StartSanitize
             // 
             BTN_StartSanitize.Animated = true;
-            BTN_StartSanitize.AutoRoundedCorners = true;
             BTN_StartSanitize.BackColor = Color.Transparent;
             BTN_StartSanitize.BorderColor = Color.Transparent;
+            BTN_StartSanitize.BorderRadius = 5;
             BTN_StartSanitize.Cursor = Cursors.Hand;
             BTN_StartSanitize.CustomizableEdges = customizableEdges14;
             BTN_StartSanitize.DisabledState.FillColor = Color.FromArgb(80, 76, 76);
             BTN_StartSanitize.DisabledState.ForeColor = Color.FromArgb(103, 99, 99);
             BTN_StartSanitize.FillColor = Color.FromArgb(162, 123, 90);
-            BTN_StartSanitize.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+            BTN_StartSanitize.Font = new Font("Leelawadee UI", 11.25F);
             BTN_StartSanitize.ForeColor = Color.White;
             BTN_StartSanitize.Image = Properties.Resources.save;
             BTN_StartSanitize.Location = new Point(612, 439);

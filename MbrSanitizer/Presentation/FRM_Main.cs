@@ -36,7 +36,7 @@ public partial class FRM_Main : Form
         else
         {
             // Clear settings if file does not exist
-            RecentFilesManager.DeleteFromRecentProjects(project);
+            RecentFilesService.DeleteFromRecentProjects(project);
         }
     }
 
@@ -121,7 +121,7 @@ public partial class FRM_Main : Form
 
             // Add imported template to recent projects
             Project project = new() { Path = openFileDialog.FileName, Template = tmpTemplate };
-            RecentFilesManager.AddToRecentProjects(project);
+            RecentFilesService.AddToRecentProjects(project);
         }
         catch(Exception ex)
         {

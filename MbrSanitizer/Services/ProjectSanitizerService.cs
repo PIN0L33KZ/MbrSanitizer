@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using MbrSanitizer.Application;
+using MbrSanitizer.Helper;
+using System.Text.RegularExpressions;
 
 namespace MbrSanitizer.Services;
 
@@ -41,23 +43,7 @@ internal static class ProjectSanitizerService
     private static void SanitizeTags(string path)
     {
         // Patterns to search for in the HTML files and remove the entire line if found
-        string[] removePatterns =
-        {
-            "<meta name=\"generator\"",
-            "<!-- Site made with Mobirise Website",
-            "AI Website Software</a>",
-            "Drag & Drop Website Builder</a>",
-            "AI Website Generator</a>",
-            "Website Builder Software</a>",
-            "Offline Website Builder</a>",
-            "Offline Website Maker</a>",
-            "Free AI Website Creator</a>",
-            "No Code Website Builder</a>",
-            "AI Website Builder</a>",
-            "Best AI Website Creator</a>",
-            "HTML Maker</a>",
-            "Mobirise.com </a>"
-        };
+        var removePatterns = FilesHelper.GetRemovePatterns(Const.RemovePatternPath);
 
         // Get all HTML files in the project directory
         var htmlFiles = Directory.GetFiles(path, "*.html");

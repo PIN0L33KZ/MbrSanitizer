@@ -50,7 +50,7 @@ public partial class FRM_RecentProjekts : Form
 
             // Add imported template to recent projects
             Project project = new() { Path = openFileDialog.FileName, Template = tmpTemplate };
-            RecentFilesManager.AddToRecentProjects(project);
+            RecentFilesService.AddToRecentProjects(project);
 
             // Launch mainform with imported template
             LaunchMainForm(project);
@@ -77,10 +77,10 @@ public partial class FRM_RecentProjekts : Form
     private void FillUi()
     {
         // Remove non-existend files from recent projects list
-        RecentFilesManager.ClearRecentProjects();
+        RecentFilesService.ClearRecentProjects();
 
         // Get the current list of recent projects
-        List<Project>? recentProjects = RecentFilesManager.GetRecentProjects();
+        List<Project>? recentProjects = RecentFilesService.GetRecentProjects();
 
         // If no recent projects are found, display a message and return Method
         if(recentProjects.Count == 0)

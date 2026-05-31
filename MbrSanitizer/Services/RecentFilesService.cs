@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace MbrSanitizer.Services;
 
-internal static class RecentFilesManager
+internal static class RecentFilesService
 {
     public static List<Project> GetRecentProjects()
     {
