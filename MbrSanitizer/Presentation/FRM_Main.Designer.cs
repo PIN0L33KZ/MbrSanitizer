@@ -92,7 +92,7 @@
             LBL_ProjectPath.Location = new Point(129, 14);
             LBL_ProjectPath.Name = "LBL_ProjectPath";
             LBL_ProjectPath.Size = new Size(590, 21);
-            LBL_ProjectPath.TabIndex = 1;
+            LBL_ProjectPath.TabIndex = 0;
             LBL_ProjectPath.Text = "Projekt Pfad selektieren...";
             TLP_Main.SetToolTip(LBL_ProjectPath, "Der selektierte Projekt Pfad");
             // 
@@ -130,7 +130,7 @@
             BTN_DeleteAllFiles.ShadowDecoration.CustomizableEdges = customizableEdges2;
             BTN_DeleteAllFiles.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             BTN_DeleteAllFiles.Size = new Size(35, 35);
-            BTN_DeleteAllFiles.TabIndex = 2;
+            BTN_DeleteAllFiles.TabIndex = 3;
             TLP_Main.SetToolTip(BTN_DeleteAllFiles, "Lösche alle Dateien innerhalb des Projekt Pfades");
             BTN_DeleteAllFiles.Click += BTN_DeleteAllFiles_Click;
             // 
@@ -149,7 +149,7 @@
             BTN_SelectProjectPath.ShadowDecoration.CustomizableEdges = customizableEdges3;
             BTN_SelectProjectPath.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             BTN_SelectProjectPath.Size = new Size(35, 35);
-            BTN_SelectProjectPath.TabIndex = 2;
+            BTN_SelectProjectPath.TabIndex = 1;
             TLP_Main.SetToolTip(BTN_SelectProjectPath, "Selektiere den angegebenen Projekt Pfad");
             BTN_SelectProjectPath.Click += BTN_SelectProjectPath_Click;
             // 
@@ -157,21 +157,21 @@
             // 
             BTN_ExportSettings.Animated = true;
             BTN_ExportSettings.BackColor = Color.Transparent;
-            BTN_ExportSettings.BorderColor = Color.Transparent;
+            BTN_ExportSettings.BorderColor = Color.FromArgb(103, 99, 99);
             BTN_ExportSettings.BorderRadius = 5;
+            BTN_ExportSettings.BorderThickness = 2;
             BTN_ExportSettings.Cursor = Cursors.Hand;
             BTN_ExportSettings.CustomizableEdges = customizableEdges4;
             BTN_ExportSettings.DisabledState.FillColor = Color.FromArgb(80, 76, 76);
             BTN_ExportSettings.DisabledState.ForeColor = Color.FromArgb(103, 99, 99);
-            BTN_ExportSettings.FillColor = Color.FromArgb(162, 123, 90);
-            BTN_ExportSettings.Font = new Font("Leelawadee UI", 11.25F);
-            BTN_ExportSettings.ForeColor = Color.White;
-            BTN_ExportSettings.Image = Properties.Resources.export;
+            BTN_ExportSettings.FillColor = Color.FromArgb(80, 76, 76);
+            BTN_ExportSettings.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+            BTN_ExportSettings.ForeColor = Color.FromArgb(235, 234, 234);
             BTN_ExportSettings.Location = new Point(8, 7);
             BTN_ExportSettings.Name = "BTN_ExportSettings";
             BTN_ExportSettings.ShadowDecoration.CustomizableEdges = customizableEdges5;
             BTN_ExportSettings.Size = new Size(130, 32);
-            BTN_ExportSettings.TabIndex = 4;
+            BTN_ExportSettings.TabIndex = 0;
             BTN_ExportSettings.Text = "Exportieren";
             TLP_Main.SetToolTip(BTN_ExportSettings, "Als Vorlage exportieren");
             BTN_ExportSettings.Click += BTN_ExportSettings_Click;
@@ -180,21 +180,21 @@
             // 
             BTN_ImportSettings.Animated = true;
             BTN_ImportSettings.BackColor = Color.Transparent;
-            BTN_ImportSettings.BorderColor = Color.Transparent;
+            BTN_ImportSettings.BorderColor = Color.FromArgb(103, 99, 99);
             BTN_ImportSettings.BorderRadius = 5;
+            BTN_ImportSettings.BorderThickness = 2;
             BTN_ImportSettings.Cursor = Cursors.Hand;
             BTN_ImportSettings.CustomizableEdges = customizableEdges6;
             BTN_ImportSettings.DisabledState.FillColor = Color.FromArgb(80, 76, 76);
             BTN_ImportSettings.DisabledState.ForeColor = Color.FromArgb(103, 99, 99);
-            BTN_ImportSettings.FillColor = Color.FromArgb(162, 123, 90);
-            BTN_ImportSettings.Font = new Font("Leelawadee UI", 11.25F);
-            BTN_ImportSettings.ForeColor = Color.White;
-            BTN_ImportSettings.Image = Properties.Resources.import;
+            BTN_ImportSettings.FillColor = Color.FromArgb(80, 76, 76);
+            BTN_ImportSettings.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+            BTN_ImportSettings.ForeColor = Color.FromArgb(235, 234, 234);
             BTN_ImportSettings.Location = new Point(144, 7);
             BTN_ImportSettings.Name = "BTN_ImportSettings";
             BTN_ImportSettings.ShadowDecoration.CustomizableEdges = customizableEdges7;
             BTN_ImportSettings.Size = new Size(130, 32);
-            BTN_ImportSettings.TabIndex = 4;
+            BTN_ImportSettings.TabIndex = 1;
             BTN_ImportSettings.Text = "Importieren";
             TLP_Main.SetToolTip(BTN_ImportSettings, "Eine Vorlage importieren");
             BTN_ImportSettings.Click += BTN_ImportSettings_Click;
@@ -209,7 +209,7 @@
             LBL_ValueShort.Location = new Point(8, 23);
             LBL_ValueShort.Name = "LBL_ValueShort";
             LBL_ValueShort.Size = new Size(293, 20);
-            LBL_ValueShort.TabIndex = 2;
+            LBL_ValueShort.TabIndex = 0;
             LBL_ValueShort.Text = "Wert um LESS Klassen (mbr-*) zu ersetzten:";
             TLP_Main.SetToolTip(LBL_ValueShort, "Dieser Wert wird genutzt, um Klassennamen innerhalb des CSS/LESS zu ersetzten");
             // 
@@ -223,7 +223,7 @@
             LBL_CustomComment.Location = new Point(378, 8);
             LBL_CustomComment.Name = "LBL_CustomComment";
             LBL_CustomComment.Size = new Size(311, 20);
-            LBL_CustomComment.TabIndex = 3;
+            LBL_CustomComment.TabIndex = 0;
             LBL_CustomComment.Text = "Persönlicher Kommentar bevor </body>-Tag:";
             TLP_Main.SetToolTip(LBL_CustomComment, "Dieser Kommentar wird vor dem schließenden Body-Tag angehangen");
             // 
@@ -254,7 +254,7 @@
             TBX_ValueLong.SelectedText = "";
             TBX_ValueLong.ShadowDecoration.CustomizableEdges = customizableEdges9;
             TBX_ValueLong.Size = new Size(339, 36);
-            TBX_ValueLong.TabIndex = 8;
+            TBX_ValueLong.TabIndex = 1;
             TLP_Main.SetToolTip(TBX_ValueLong, "Dieser Wert wird genutzt, um Ordner- und Dateinamen zu ersetzten");
             // 
             // TBX_ValueShort
@@ -284,7 +284,7 @@
             TBX_ValueShort.SelectedText = "";
             TBX_ValueShort.ShadowDecoration.CustomizableEdges = customizableEdges11;
             TBX_ValueShort.Size = new Size(339, 36);
-            TBX_ValueShort.TabIndex = 8;
+            TBX_ValueShort.TabIndex = 0;
             TLP_Main.SetToolTip(TBX_ValueShort, "Dieser Wert wird genutzt, um Klassennamen innerhalb des CSS/LESS zu ersetzten");
             // 
             // LBL_ValueLong
@@ -297,7 +297,7 @@
             LBL_ValueLong.Location = new Point(8, 69);
             LBL_ValueLong.Name = "LBL_ValueLong";
             LBL_ValueLong.Size = new Size(359, 20);
-            LBL_ValueLong.TabIndex = 2;
+            LBL_ValueLong.TabIndex = 0;
             LBL_ValueLong.Text = "Wert um Ordner und Dateien (mobirise) zu ersetzten:";
             TLP_Main.SetToolTip(LBL_ValueLong, "Dieser Wert wird genutzt, um Ordner- und Dateinamen zu ersetzten");
             // 
@@ -328,7 +328,7 @@
             TBX_CustomComment.SelectedText = "";
             TBX_CustomComment.ShadowDecoration.CustomizableEdges = customizableEdges13;
             TBX_CustomComment.Size = new Size(339, 108);
-            TBX_CustomComment.TabIndex = 4;
+            TBX_CustomComment.TabIndex = 2;
             TLP_Main.SetToolTip(TBX_CustomComment, "Dieser Kommentar wird vor dem schließenden Body-Tag angehangen");
             TBX_CustomComment.WordWrap = false;
             // 
@@ -344,7 +344,7 @@
             CHX_AntiDragImgs.Location = new Point(8, 38);
             CHX_AntiDragImgs.Name = "CHX_AntiDragImgs";
             CHX_AntiDragImgs.Size = new Size(219, 24);
-            CHX_AntiDragImgs.TabIndex = 0;
+            CHX_AntiDragImgs.TabIndex = 1;
             CHX_AntiDragImgs.Text = "Bilder nicht ziehbar machen?";
             TLP_Main.SetToolTip(CHX_AntiDragImgs, "Sollen alle Bilder um \"draggable=false\" erweitert werden?");
             CHX_AntiDragImgs.UncheckedState.BorderColor = Color.FromArgb(103, 99, 99);
@@ -385,14 +385,13 @@
             BTN_StartSanitize.DisabledState.FillColor = Color.FromArgb(80, 76, 76);
             BTN_StartSanitize.DisabledState.ForeColor = Color.FromArgb(103, 99, 99);
             BTN_StartSanitize.FillColor = Color.FromArgb(162, 123, 90);
-            BTN_StartSanitize.Font = new Font("Leelawadee UI", 11.25F);
-            BTN_StartSanitize.ForeColor = Color.White;
-            BTN_StartSanitize.Image = Properties.Resources.save;
+            BTN_StartSanitize.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+            BTN_StartSanitize.ForeColor = Color.FromArgb(235, 234, 234);
             BTN_StartSanitize.Location = new Point(612, 439);
             BTN_StartSanitize.Name = "BTN_StartSanitize";
             BTN_StartSanitize.ShadowDecoration.CustomizableEdges = customizableEdges15;
             BTN_StartSanitize.Size = new Size(130, 32);
-            BTN_StartSanitize.TabIndex = 10;
+            BTN_StartSanitize.TabIndex = 0;
             BTN_StartSanitize.Text = "Bereinigen";
             TLP_Main.SetToolTip(BTN_StartSanitize, "Den Reinigungsprozess deines Projektes starten");
             BTN_StartSanitize.Click += BTN_StartSanitize_Click;
@@ -411,7 +410,7 @@
             PNL_TopBar.Padding = new Padding(5);
             PNL_TopBar.ShadowDecoration.CustomizableEdges = customizableEdges17;
             PNL_TopBar.Size = new Size(727, 47);
-            PNL_TopBar.TabIndex = 3;
+            PNL_TopBar.TabIndex = 0;
             // 
             // PNL_TopBar2
             // 
@@ -429,7 +428,7 @@
             PNL_TopBar2.Padding = new Padding(5);
             PNL_TopBar2.ShadowDecoration.CustomizableEdges = customizableEdges19;
             PNL_TopBar2.Size = new Size(727, 49);
-            PNL_TopBar2.TabIndex = 4;
+            PNL_TopBar2.TabIndex = 0;
             // 
             // PNL_TopSpacer
             // 
@@ -463,7 +462,7 @@
             PNL_TopBar3.Padding = new Padding(5);
             PNL_TopBar3.ShadowDecoration.CustomizableEdges = customizableEdges21;
             PNL_TopBar3.Size = new Size(727, 113);
-            PNL_TopBar3.TabIndex = 7;
+            PNL_TopBar3.TabIndex = 0;
             // 
             // PNL_TopSpacer3
             // 
@@ -489,7 +488,7 @@
             PNL_TopBar4.Padding = new Padding(5);
             PNL_TopBar4.ShadowDecoration.CustomizableEdges = customizableEdges23;
             PNL_TopBar4.Size = new Size(727, 147);
-            PNL_TopBar4.TabIndex = 9;
+            PNL_TopBar4.TabIndex = 0;
             // 
             // LBL_Copyright
             // 
@@ -499,11 +498,11 @@
             LBL_Copyright.BackColor = Color.Transparent;
             LBL_Copyright.Font = new Font("Leelawadee UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             LBL_Copyright.ForeColor = Color.FromArgb(151, 148, 148);
-            LBL_Copyright.Location = new Point(15, 456);
+            LBL_Copyright.Location = new Point(15, 441);
             LBL_Copyright.Name = "LBL_Copyright";
-            LBL_Copyright.Size = new Size(180, 15);
-            LBL_Copyright.TabIndex = 11;
-            LBL_Copyright.Text = "© PIN0L33KZ, www.pinoleekz.de";
+            LBL_Copyright.Size = new Size(59, 30);
+            LBL_Copyright.TabIndex = 0;
+            LBL_Copyright.Text = "version\r\nappName";
             // 
             // FRM_Main
             // 

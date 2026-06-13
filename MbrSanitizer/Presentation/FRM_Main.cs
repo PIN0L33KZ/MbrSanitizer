@@ -17,7 +17,7 @@ public partial class FRM_Main : Form
     public FRM_Main(Project project)
     {
         InitializeComponent();
-        Text = $"{Const.AppName} v{Const.AppVersion}";
+        Text = $"{Const.AppName}";
 
         // Check if last known good template is filled in application settings
         if(project == null || project.Path == string.Empty)
@@ -253,6 +253,7 @@ public partial class FRM_Main : Form
     private void FillUi(Template template)
     {
         LBL_ProjectPath.Text = template.ProjectPath;
+        LBL_Copyright.Text = $"Version: {Const.AppVersion}\n© PIN0L33KZ GbR";
         TBX_ValueShort.Text = template.ValueShort;
         TBX_ValueLong.Text = template.ValueLong;
         CHX_DeleteMbrFile.Checked = template.DeleteMbrFile;

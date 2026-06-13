@@ -58,62 +58,66 @@ partial class FRM_RecentProjekts
         // 
         LBL_FormHeading.AutoSize = true;
         LBL_FormHeading.Font = new Font("Leelawadee UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        LBL_FormHeading.ForeColor = Color.FromArgb(215, 194, 176);
         LBL_FormHeading.Location = new Point(152, 30);
         LBL_FormHeading.Name = "LBL_FormHeading";
         LBL_FormHeading.Size = new Size(160, 30);
-        LBL_FormHeading.TabIndex = 1;
+        LBL_FormHeading.TabIndex = 0;
         LBL_FormHeading.Text = "Letzte Projekte";
         // 
         // BTN_ExitApplication
         // 
+        BTN_ExitApplication.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
         BTN_ExitApplication.Animated = true;
         BTN_ExitApplication.BackColor = Color.Transparent;
-        BTN_ExitApplication.BorderColor = Color.Transparent;
+        BTN_ExitApplication.BorderColor = Color.FromArgb(103, 99, 99);
         BTN_ExitApplication.BorderRadius = 5;
+        BTN_ExitApplication.BorderThickness = 2;
         BTN_ExitApplication.Cursor = Cursors.Hand;
         BTN_ExitApplication.CustomizableEdges = customizableEdges1;
         BTN_ExitApplication.DisabledState.BorderColor = Color.DarkGray;
         BTN_ExitApplication.DisabledState.CustomBorderColor = Color.DarkGray;
         BTN_ExitApplication.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
         BTN_ExitApplication.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-        BTN_ExitApplication.FillColor = Color.FromArgb(162, 123, 90);
-        BTN_ExitApplication.Font = new Font("Leelawadee UI", 11.25F);
-        BTN_ExitApplication.ForeColor = Color.White;
-        BTN_ExitApplication.Image = Properties.Resources.exit;
-        BTN_ExitApplication.Location = new Point(291, 434);
+        BTN_ExitApplication.FillColor = Color.FromArgb(80, 76, 76);
+        BTN_ExitApplication.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+        BTN_ExitApplication.ForeColor = Color.FromArgb(235, 234, 234);
+        BTN_ExitApplication.Location = new Point(344, 434);
         BTN_ExitApplication.Name = "BTN_ExitApplication";
         BTN_ExitApplication.ShadowDecoration.CustomizableEdges = customizableEdges2;
         BTN_ExitApplication.Size = new Size(109, 32);
-        BTN_ExitApplication.TabIndex = 11;
+        BTN_ExitApplication.TabIndex = 2;
         BTN_ExitApplication.Text = "Beenden";
         BTN_ExitApplication.Click += BTN_ExitApplication_Click;
         // 
         // BTN_ImportTemplate
         // 
+        BTN_ImportTemplate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
         BTN_ImportTemplate.Animated = true;
         BTN_ImportTemplate.BackColor = Color.Transparent;
-        BTN_ImportTemplate.BorderColor = Color.Transparent;
+        BTN_ImportTemplate.BorderColor = Color.FromArgb(103, 99, 99);
         BTN_ImportTemplate.BorderRadius = 5;
+        BTN_ImportTemplate.BorderThickness = 2;
         BTN_ImportTemplate.Cursor = Cursors.Hand;
         BTN_ImportTemplate.CustomizableEdges = customizableEdges3;
         BTN_ImportTemplate.DisabledState.BorderColor = Color.DarkGray;
         BTN_ImportTemplate.DisabledState.CustomBorderColor = Color.DarkGray;
         BTN_ImportTemplate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
         BTN_ImportTemplate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-        BTN_ImportTemplate.FillColor = Color.FromArgb(162, 123, 90);
-        BTN_ImportTemplate.Font = new Font("Leelawadee UI", 11.25F);
-        BTN_ImportTemplate.ForeColor = Color.White;
-        BTN_ImportTemplate.Image = Properties.Resources.import;
-        BTN_ImportTemplate.Location = new Point(64, 434);
+        BTN_ImportTemplate.FillColor = Color.FromArgb(80, 76, 76);
+        BTN_ImportTemplate.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+        BTN_ImportTemplate.ForeColor = Color.FromArgb(235, 234, 234);
+        BTN_ImportTemplate.Location = new Point(103, 434);
         BTN_ImportTemplate.Name = "BTN_ImportTemplate";
         BTN_ImportTemplate.ShadowDecoration.CustomizableEdges = customizableEdges4;
         BTN_ImportTemplate.Size = new Size(130, 32);
-        BTN_ImportTemplate.TabIndex = 11;
+        BTN_ImportTemplate.TabIndex = 1;
         BTN_ImportTemplate.Text = "Importieren";
         BTN_ImportTemplate.Click += BTN_ImportTemplate_Click;
         // 
         // BTN_NewTemplate
         // 
+        BTN_NewTemplate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
         BTN_NewTemplate.Animated = true;
         BTN_NewTemplate.BackColor = Color.Transparent;
         BTN_NewTemplate.BorderColor = Color.Transparent;
@@ -125,14 +129,13 @@ partial class FRM_RecentProjekts
         BTN_NewTemplate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
         BTN_NewTemplate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
         BTN_NewTemplate.FillColor = Color.FromArgb(162, 123, 90);
-        BTN_NewTemplate.Font = new Font("Leelawadee UI", 11.25F);
-        BTN_NewTemplate.ForeColor = Color.White;
-        BTN_NewTemplate.Image = Properties.Resources.link;
-        BTN_NewTemplate.Location = new Point(200, 434);
+        BTN_NewTemplate.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold);
+        BTN_NewTemplate.ForeColor = Color.FromArgb(235, 234, 234);
+        BTN_NewTemplate.Location = new Point(12, 434);
         BTN_NewTemplate.Name = "BTN_NewTemplate";
         BTN_NewTemplate.ShadowDecoration.CustomizableEdges = customizableEdges6;
         BTN_NewTemplate.Size = new Size(85, 32);
-        BTN_NewTemplate.TabIndex = 11;
+        BTN_NewTemplate.TabIndex = 0;
         BTN_NewTemplate.Text = "Neu";
         BTN_NewTemplate.Click += BTN_NewTemplate_Click;
         // 
@@ -157,7 +160,7 @@ partial class FRM_RecentProjekts
         PNL_RecentProjects.Location = new Point(12, 97);
         PNL_RecentProjects.Name = "PNL_RecentProjects";
         PNL_RecentProjects.Size = new Size(441, 331);
-        PNL_RecentProjects.TabIndex = 12;
+        PNL_RecentProjects.TabIndex = 0;
         // 
         // FRM_RecentProjekts
         // 
